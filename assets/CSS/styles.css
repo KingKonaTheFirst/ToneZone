@@ -7,3 +7,11 @@ font-family: 'Special Elite', cursive; */
 .vision {
     font-family: 'Caprasimo', cursive;
 }
+
+.outlined-text {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-fill-color: white;
+    text-stroke-width: 2px;
+    text-stroke-color: black;
