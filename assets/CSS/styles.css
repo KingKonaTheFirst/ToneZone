@@ -5,6 +5,7 @@ font-family: 'Caprasimo', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'Russo One', sans-serif;
 font-family: 'Special Elite', cursive; */
+
 #container {
     display: flex;
     justify-content: space-around;
@@ -13,4 +14,12 @@ font-family: 'Special Elite', cursive; */
     margin-right: 15%;
     font-family: 'Caprasimo', cursive;
 
+.vision {
+    font-family: 'Caprasimo', cursive;
+}
+
+.outlined-text {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 }
