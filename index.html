@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<!-- youtube api -->
+    <script src="https://apis.google.com/js/api.js"></script>
     <!-- link to google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caprasimo&family=Indie+Flower&family=Russo+One&family=Special+Elite&display=swap" rel="stylesheet">
     <!-- link to jquery UI -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -81,6 +83,7 @@
   </div>
   <div class="flex-1 p-4">
     <h1 class="text-2xl font-semibold mb-4">Main Content</h1>
+    <div id="videoContainer"></div>
     <p>This is the main content area.</p>
   </div>
 </div>
@@ -97,17 +100,21 @@
   </form>
 </div>
 
+<div id="videoContainer"></div>
+
 <footer class="bg-blue-700 bg-opacity-85 mt-auto">
   <h3 class="text-center font-medium text-2xl outlined-text-sm">ToneZone &copy 2023 Made By: Landon Deroin, Russell Heady II, and Travis Rivera</h3>
 </footer>
 
 <!-- Scripts -->
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>   
 <!-- Jquery UI -->
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <!-- Javascript page -->
 <script src="./assets/JS/homepage.js"></script>
+
 </body>
 </html>
 
