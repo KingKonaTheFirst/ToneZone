@@ -32,3 +32,9 @@ font-family: 'Special Elite', cursive; */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
+#sideNav {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
