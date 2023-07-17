@@ -4,6 +4,19 @@ font-family: 'Indie Flower', cursive;
 font-family: 'Russo One', sans-serif;
 font-family: 'Special Elite', cursive; */
 
+#container {
+    display: flex;
+    justify-content: space-around;
+    margin: 75px 20px;
+    font-family: 'Caprasimo', cursive;
+    color: black;
+}
+
+#center-card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .vision {
     font-family: 'Caprasimo', cursive;
 }
