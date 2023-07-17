@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caprasimo&family=Indie+Flower&family=Russo+One&family=Special+Elite&display=swap" rel="stylesheet">
     <!-- link to jquery UI -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <!-- link to tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom stylesheet -->
@@ -83,6 +83,18 @@
     <h1 class="text-2xl font-semibold mb-4">Main Content</h1>
     <p>This is the main content area.</p>
   </div>
+</div>
+
+<div id="dialog-form" title="gym equipment selection">
+  <p class="validateTips">Do you have access to gym equipment? Please answer Yes or No.</p>
+  <form>
+    <fieldset>
+      <label for="name">Answer</label>
+      <input type="text" name="answer" id="answer" placeholder="Yes or No" class="text ui-widget-content ui-corner-all">
+
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
 </div>
 
 <footer class="bg-blue-700 bg-opacity-85 mt-auto">
