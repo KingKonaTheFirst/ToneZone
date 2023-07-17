@@ -1,18 +1,8 @@
-/* Pick one of the fonts below to use
-font-family: 'Alfa Slab One', cursive;
-font-family: 'Ropa Sans', sans-serif;
+/* font-family: 'Alfa Slab One', cursive;
 font-family: 'Caprasimo', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'Russo One', sans-serif;
 font-family: 'Special Elite', cursive; */
-
-#container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-left: 15%;
-    margin-right: 15%;
-    font-family: 'Caprasimo', cursive;
 
 .vision {
     font-family: 'Caprasimo', cursive;
@@ -22,4 +12,5 @@ font-family: 'Special Elite', cursive; */
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+   
 }
