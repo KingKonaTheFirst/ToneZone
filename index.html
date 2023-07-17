@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caprasimo&family=Indie+Flower&family=Russo+One&family=Special+Elite&display=swap" rel="stylesheet">
     <!-- link to jquery UI -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <!-- link to tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom stylesheet -->
@@ -17,7 +17,7 @@
     <title>ToneZone</title>
 </head>
 
-<body class="flex flex-col min-h-screen vision">
+<body class="flex flex-col min-h-screen vision bg-[url(./assets/images/homepagebackground.jpeg)] bg-cover">
   <!-- Heading and nav bar -->
   <header class="bg-blue-700 bg-opacity-85">
       <div class="flex justify-center">
@@ -25,11 +25,11 @@
           
             <div class="px-6 py-4">
               <div class="outlined-text font-bold text-red-400 text-center text-4xl mb-2">Welcome to the Tone Zone</div>
-                <nav class="bg-blue-700 bg-opacity-50 rounded-lg text-center">
+                <nav class="rounded-lg text-center">
                       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                         <div class="rounded relative flex items-center justify-center h-16">
                           <div class="hidden md:block center-nav">
-                              <div class="space-x-4">
+                              <div class="bg-blue-700 bg-opacity-50 space-x-4">
 
                                 <a href="./index.html" class="text-white hover:underline px-3 py-2 rounded-md text-lg font-medium">Home</a>
                                 <a href="https://github.com/KingKonaTheFirst/ToneZone" target="_blank" class="text-white hover:underline px-3 py-2 rounded-md text-lg font-medium">GitHub</a>
@@ -43,8 +43,8 @@
                       </nav>
   </header>
  <!-- sidebar buttons -->
- <div class="flex max-h-screen">
-  <div class="bg-gray-300 p-4">
+ <div class="flex" id="sideNav">
+  <div class="bg-gray-200 rounded-r-lg p-4">
     <h1 class="text-xl font-semibold mb-4">Sidebar</h1>
     <div class="grid gap-4">
       <div class="bg-white rounded-lg p-4 shadow">
@@ -80,8 +80,8 @@
     </div>
   </div>
   <div class="flex-1 p-4">
-    <h1 class="text-2xl font-semibold mb-4">Main Content</h1>
-    <p>This is the main content area.</p>
+    <h1 class="text-2xl font-semibold mb-4 outlined-text-sm">Main Content</h1>
+    <p class="outlined-text-sm">This is the main content area.</p>
   </div>
 </div>
 
