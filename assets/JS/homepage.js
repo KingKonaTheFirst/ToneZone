@@ -65,7 +65,7 @@ fetch(apiUrl + '?part=snippet&q=chest workout&type=video&maxResults=10&key=' + a
     var videoContainer = document.createElement('div');
     videoContainer.classList.add('video-item');
     videoContainer.appendChild(iframe);
-    videoContainer.appendChild(thumbnail);
+    
 
     // Append the video container to the main container in your HTML
     document.getElementById('videoContainer').appendChild(videoContainer);
