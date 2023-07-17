@@ -28,3 +28,9 @@ font-family: 'Special Elite', cursive; */
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
+
+.outlined-text-sm {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
