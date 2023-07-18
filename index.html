@@ -50,7 +50,7 @@
     <h1 class="text-3xl outlined-text-sm font-bold text-center mb-4">Sidebar</h1>
     <div class="grid">
       <div class="rounded-lg p-4">
-        <button id="chest"class="w-full h-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
+        <button id="chest" class="w-full h-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
           Chest & Triceps
         </button>
       </div>
@@ -60,22 +60,22 @@
         </button>
       </div>
       <div class="rounded-lg p-4">
-        <button class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
+        <button id="shoulders" class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
           Shoulders
         </button>
       </div>
       <div class="rounded-lg p-4">
-        <button class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
+        <button id="legs" class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
           Legs
         </button>
       </div>
       <div class="rounded-lg p-4">
-        <button class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
+        <button id="abs" class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
           Abs
         </button>
       </div>
       <div class="rounded-lg p-4">
-        <button class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
+        <button id="cardio" class="w-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
           Cardio
         </button>
       </div>
@@ -89,11 +89,12 @@
   </div>
 </div>
 
-<div id="dialog-form" title="gym equipment selection">
+<!-- html for modal dialog box -->
+<div id="dialog-form" title="Gym Equipment Selection">
   <p class="validateTips">Do you have access to gym equipment? Please answer Yes or No.</p>
   <form>
     <fieldset>
-      <label for="name">Answer</label>
+      <label for="answer">Answer</label>
       <input type="text" name="answer" id="answer" placeholder="Yes or No" class="text ui-widget-content ui-corner-all">
 
       <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">

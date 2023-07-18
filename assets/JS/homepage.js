@@ -18,21 +18,19 @@ $(document).ready(function () {
     ytVid();
   });
   $("#shoulders").click(function () {
-    //   alert for testing delete later
-    alert("Button clicked!");
+
   });
   $("#legs").click(function () {
-    //   alert for testing delete later
-    alert("Button clicked!");
+
   });
   $("#abs").click(function () {
-    //   alert for testing delete later
-    alert("Button clicked!");
+
   });
   $("#cardio").click(function () {
-    //   alert for testing delete later
-    alert("Button clicked!");
+
   });
+  $("#dialog-form").dialog(function () {
+    ("open")});
 });
 
 function ytVid() {
@@ -73,4 +71,66 @@ function ytVid() {
   .catch(function (error) {
     console.log("Error:", error.message);
   });
-}
+
+$( function() {
+  var dialog, form,
+
+    answer = $("#answer"),
+    allFields = $( [] ).add(answer),
+    tips = $(".validateTips");
+
+  function updateTips(t) {
+    tips
+      .text(t)
+      .addClass("ui-state-highlight");
+    setTimeout(function() {
+      tips.removeClass("ui-state-highlight", 1500);
+    }, 500);
+  }
+
+  function checkAnswer(o) {
+    if (o.val() === "yes" || o.val() === "no") {
+      return true;
+    } else {
+      o.addClass("ui-state-error");
+      updateTips("Answer must be Yes or No");
+      return false;
+    }
+  }
+
+  function saveAnswer() {
+    var valid = true;
+    allFields.removeClass( "ui-state-error" );
+
+    valid = valid && checkAnswer(answer);
+
+    if ( valid ) {
+      localStorage.setItem("answer", answer.val());
+      dialog.dialog( "close" );
+    }
+    return valid;
+  }
+
+  dialog = $( "#dialog-form" ).dialog({
+    autoOpen: false,
+    height: 400,
+    width: 350,
+    modal: true,
+    buttons: {
+      "Submit": saveAnswer,
+      Cancel: function() {
+        dialog.dialog( "close" );
+      }
+    },
+    close: function() {
+      form[ 0 ].reset();
+      allFields.removeClass( "ui-state-error" );
+    }
+  });
+
+  form = dialog.find("form").on("submit", function(event) {
+    event.preventDefault();
+    saveAnswer();
+  });
+
+});
