@@ -5,6 +5,7 @@ var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
+var muscle = 'biceps';
 
 $(document).ready(function () {
   $("#chest").click(function () {
@@ -34,9 +35,9 @@ $(document).ready(function () {
 });
 
 function ytVid() {
-  var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-  var apiUrl = "https://www.googleapis.com/youtube/v3/search";
-  var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
+  let apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
+  let apiUrl = "https://www.googleapis.com/youtube/v3/search";
+  let videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
   fetch(apiUrl + videoSearch + apiKey)
   .then(function (response) {
     if (response.ok) {
@@ -71,6 +72,38 @@ function ytVid() {
   .catch(function (error) {
     console.log("Error:", error.message);
   })};
+
+$.ajax({
+  method: 'GET',
+  url: 'https://api.api-ninjas.com/v1/exercises?muscle=' + muscle,
+  headers: { 'X-Api-Key': 'ltB+8GWY7JDnP5O/RlWgGA==E7lmmwFNWUvlNhpp'},
+  contentType: 'application/json',
+  success: function(result) {
+      console.log(result);
+  },
+  error: function ajaxError(jqXHR) {
+      console.error('Error: ', jqXHR.responseText);
+  }
+});
+
+function exsDB() {
+  let url = "https://api.api-ninjas.com/v1/exercises?muscle=" + muscle;
+  let options = {
+    method: "GET",
+    headers: {
+      "X-API-Key": "ltB+8GWY7JDnP5O/RlWgGA==E7lmmwFNWUvlNhpp"
+    }
+  }
+  fetch(url + options)
+  .then(function (response) {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error("Request failed. Status code: " + response.status);
+  })
+}
+
+exsDB();
 
 $( function() {
   var dialog, form,
