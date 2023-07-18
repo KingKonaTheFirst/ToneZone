@@ -34,11 +34,16 @@ $(document).ready(function () {
     ("open")});
 });
 
+var apiKey = ['AIzaSyBYNhIlc9YdmoYHiCntxp--3Ij1vzAkMnQ', 'AIzaSyDn2CMSUh7Rhv-2Ds0l28llAB6hMCQSNL8', 'AIzaSyAhAVWVVoc1OCmuRgIKRAiXuL9uLRgSWg0'];
+let currentIndex = 0;
+
 function ytVid() {
-  let apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-  let apiUrl = "https://www.googleapis.com/youtube/v3/search";
-  let videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
-  fetch(apiUrl + videoSearch + apiKey)
+//  youtube api keys
+  var currentApiKey = apiKey[currentIndex];
+  var apiUrl = "https://www.googleapis.com/youtube/v3/search";
+  var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
+//  fetch command for youtube
+  fetch(apiUrl + videoSearch + currentApiKey)
   .then(function (response) {
     if (response.ok) {
       return response.json();
@@ -71,6 +76,9 @@ function ytVid() {
   })
   .catch(function (error) {
     console.log("Error:", error.message);
+    currentIndex = (currentIndex + 1) % apiKey.length;
+    ytVid();
+    
   })};
 
 
