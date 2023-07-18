@@ -4,12 +4,16 @@ var shoulders = $("#shoulders");
 var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
+var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
+var apiUrl = "https://www.googleapis.com/youtube/v3/search";
+var input = "";
+var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
 
 $(document).ready(function () {
   // Add click listener to the button
   $("#chest").click(function () {
     // Code to execute when the button is clicked
-    alert("Button clicked!");
+    alert("Button clicked")
   });
   $("#back").click(function () {
     //   alert for testing delete later
@@ -33,10 +37,6 @@ $(document).ready(function () {
   });
 });
 
-var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-var apiUrl = "https://www.googleapis.com/youtube/v3/search";
-var input = "";
-var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
 
 fetch(apiUrl + videoSearch + apiKey)
   .then(function (response) {
