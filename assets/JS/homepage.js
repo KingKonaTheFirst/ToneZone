@@ -5,7 +5,7 @@ var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
-var muscle = "";
+var muscle = "back";
 
 $(document).ready(function () {
   $("#chest").click(function () {
@@ -91,7 +91,7 @@ function exsDB() {
     }
   };
   
-  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPart/' + muscle , settings)
+  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPart/' + muscle, settings)
   .then(function (response) {
     if (response.ok) {
       return response.json();
@@ -102,11 +102,12 @@ function exsDB() {
     console.log(data);
     let array = data;
     for (let i = 0; i < 10; i++) {
-      let exercise = array[Math.floor(Math.random() * array.length)]
+      var exercise = array[Math.floor(Math.random() * array.length)]
       console.log(exercise);
-      // let exsName = data.name
-      // console.log(exsName);
+      let exsName = exercise.name
+      console.log(exsName);
     }
+
 
 
 
