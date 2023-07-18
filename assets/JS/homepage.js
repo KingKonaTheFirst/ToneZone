@@ -124,13 +124,17 @@ function exsDB() {
       let exsGif = exercise.gifUrl
       console.log(exsGif);
 
-      let exsList = document.createElement("ul")
-      for (let list = 0; list < exercise.length; list++) {
-        let exsLI = document.createElement("li")
-        exsList.appendChild(exsLI)
-        
-        document.getElementById("#exercises").appendChild(exsList)
+
+      let exsContainer = document.createElement("div");
+      let exsList = document.createElement("ul");
+      for (let i = 0; i < exercise.length; i++) {
+        let exsLI = document.createElement("li");
+        exsLI.textContent = exsName;
+        exsList.appendChild(exsLI);
+
+        document.getElementById("#exercises").appendChild(exsList);
       }
+
     }
 
 
