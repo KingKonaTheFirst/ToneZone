@@ -104,7 +104,10 @@ function exsDB() {
     for (let i = 0; i < 10; i++) {
       let exercise = array[Math.floor(Math.random() * array.length)]
       console.log(exercise);
+      // let exsName = data.name
+      // console.log(exsName);
     }
+
 
 
     // var videoTitle = data.items[0].snippet.title;
