@@ -70,7 +70,7 @@ function ytVid() {
   })
   .catch(function (error) {
     console.log("Error:", error.message);
-  });
+  })};
 
 $( function() {
   var dialog, form,
