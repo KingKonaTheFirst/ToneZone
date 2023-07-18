@@ -23,7 +23,7 @@
   <!-- Heading and nav bar -->
   <header class="bg-blue-700 bg-opacity-85">
       <div class="flex justify-center">
-          <div class="container max-w-2xl mt-9 mb-5 rounded-lg overflow-hidden shadow-lg bg-[url(./assets/images/hero.jpg)] bg-cover bg-center bg-no-repeat">
+          <div class="container max-w-2xl mt-9 mb-5 rounded-lg overflow-hidden shadow-lg bg-cover bg-center bg-no-repeat bg-title">
           
             <div class="px-6 py-4">
               <div class="outlined-text font-bold text-red-400 text-center text-4xl mb-2">Welcome to the Tone Zone</div>
@@ -48,6 +48,9 @@
  <div class="flex" id="sideNav">
   <div class="bg-white bg-opacity-40 rounded-r-lg p-4">
     <h1 class="text-3xl outlined-text-sm font-bold text-center mb-4">Sidebar</h1>
+    <label for="answer">Do you have access to a gym?</label><br>
+    <input type="checkbox" id="answer" name="gym" value="Yes" class="">
+    <label for="answer">Yes</label><br>
     <div class="grid">
       <div class="rounded-lg p-4">
         <button id="chest" class="w-full h-full bg-blue-700 hover:bg-black text-lg outlined-text-sm py-2 px-4 rounded">
@@ -88,20 +91,6 @@
     <p class="outlined-text-sm">This is the main content area.</p>
   </div>
 </div>
-
-<!-- html for modal dialog box -->
-<div id="dialog-form" title="Gym Equipment Selection">
-  <p class="validateTips">Do you have access to gym equipment? Please answer Yes or No.</p>
-  <form>
-    <fieldset>
-      <label for="answer">Answer</label>
-      <input type="text" name="answer" id="answer" placeholder="Yes or No" class="text ui-widget-content ui-corner-all">
-
-      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-    </fieldset>
-  </form>
-</div>
-
 
 <footer class="bg-blue-700 bg-opacity-85 mt-auto">
   <h3 class="text-center font-medium text-2xl outlined-text-sm">ToneZone &copy 2023 Made By: Landon Deroin, Russell Heady II, and Travis Rivera</h3>
