@@ -122,6 +122,14 @@ function exsDB() {
       console.log(exsName);
       let exsGif = exercise.gifUrl
       console.log(exsGif);
+
+      let exsList = document.createElement("ul")
+      for (let list = 0; list < exercise.length; list++) {
+        let exsLI = document.createElement("li")
+        exsList.appendChild(exsLI)
+        
+        document.getElementById("#exercises").appendChild(exsList)
+      }
     }
 
 
