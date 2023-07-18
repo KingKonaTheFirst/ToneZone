@@ -1,6 +1,7 @@
 var chest = $("#chest");
 var back = $("#back");
 var shoulders = $("#shoulders");
+var arms = $("#arms");
 var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
@@ -15,20 +16,28 @@ $(document).ready(function () {
   });
   // Add click listener to the button
   $("#back").click(function () {
-    input = "back and bicep workout";
+    input = "back workout";
     ytVid();
   });
   $("#shoulders").click(function () {
-
+    input = "shoulder workout";
+    ytVid();
+  });
+  $("#arms").click(function () {
+    input = "arm workout";
+    ytVid();
   });
   $("#legs").click(function () {
-
+    input = "leg workout";
+    ytVid();
   });
   $("#abs").click(function () {
-
+    input = "ab workout";
+    ytVid();
   });
   $("#cardio").click(function () {
-
+    input = "cardio workout";
+    ytVid();
   });
   $("#dialog-form").dialog(function () {
     ("open")});
@@ -109,18 +118,6 @@ function exsDB() {
     }
 
 
-
-
-    // var videoTitle = data.items[0].snippet.title;
-    // var videoThumbnail = data.items[0].snippet.thumbnails.default.url;
-
-    // // Create a container element for the video
-    // var videoContainer = document.createElement("div");
-    // videoContainer.classList.add("video-item");
-    // videoContainer.appendChild(iframe);
-
-    // // Append the video container to the main container in your HTML
-    // document.getElementById("videoContainer").appendChild(videoContainer);
   })
     .catch(error => console.error(error));
 }
