@@ -91,7 +91,7 @@ function exsDB() {
     }
   };
   
-  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPart/' + muscle , settings)
+  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList' + muscle , settings)
   .then(function (response) {
     if (response.ok) {
       return response.json();
