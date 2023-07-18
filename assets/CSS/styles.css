@@ -39,6 +39,13 @@ font-family: 'Special Elite', cursive; */
     
 }
 
+#apiContainer {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Caprasimo', cursive;
+    color: black;
+}
+
 .bg-title {
     background-image: url(../Images/header.jpg);
 }
