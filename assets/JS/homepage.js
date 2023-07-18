@@ -5,6 +5,7 @@ var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
+var muscle = 'biceps';
 
 $(document).ready(function () {
   $("#chest").click(function () {
@@ -34,9 +35,9 @@ $(document).ready(function () {
 });
 
 function ytVid() {
-  var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-  var apiUrl = "https://www.googleapis.com/youtube/v3/search";
-  var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
+  let apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
+  let apiUrl = "https://www.googleapis.com/youtube/v3/search";
+  let videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
   fetch(apiUrl + videoSearch + apiKey)
   .then(function (response) {
     if (response.ok) {
@@ -72,65 +73,20 @@ function ytVid() {
     console.log("Error:", error.message);
   })};
 
-$( function() {
-  var dialog, form,
 
-    answer = $("#answer"),
-    allFields = $( [] ).add(answer),
-    tips = $(".validateTips");
-
-  function updateTips(t) {
-    tips
-      .text(t)
-      .addClass("ui-state-highlight");
-    setTimeout(function() {
-      tips.removeClass("ui-state-highlight", 1500);
-    }, 500);
-  }
-
-  function checkAnswer(o) {
-    if (o.val() === "yes" || o.val() === "no") {
-      return true;
-    } else {
-      o.addClass("ui-state-error");
-      updateTips("Answer must be Yes or No");
-      return false;
+function exsDB() {
+  const settings = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '73e984e367msh9cc0deea9bcc832p1ef798jsn680812134482',
+      'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
-  }
+  };
+  
+  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', settings)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
 
-  function saveAnswer() {
-    var valid = true;
-    allFields.removeClass( "ui-state-error" );
-
-    valid = valid && checkAnswer(answer);
-
-    if ( valid ) {
-      localStorage.setItem("answer", answer.val());
-      dialog.dialog( "close" );
-    }
-    return valid;
-  }
-
-  dialog = $( "#dialog-form" ).dialog({
-    autoOpen: false,
-    height: 400,
-    width: 350,
-    modal: true,
-    buttons: {
-      "Submit": saveAnswer,
-      Cancel: function() {
-        dialog.dialog( "close" );
-      }
-    },
-    close: function() {
-      form[ 0 ].reset();
-      allFields.removeClass( "ui-state-error" );
-    }
-  });
-
-  form = dialog.find("form").on("submit", function(event) {
-    event.preventDefault();
-    saveAnswer();
-  });
-
-});
+exsDB();
