@@ -43,7 +43,7 @@ $(document).ready(function () {
     input = "cardio workout";
     ytVid();
   });
-  
+
   $("#dialog-form").dialog(function () {
     ("open")});
 });
@@ -121,6 +121,16 @@ function exsDB() {
       console.log(exercise);
       let exsName = exercise.name
       console.log(exsName);
+      let exsGif = exercise.gifUrl
+      console.log(exsGif);
+
+      let exsList = document.createElement("ul")
+      for (let list = 0; list < exercise.length; list++) {
+        let exsLI = document.createElement("li")
+        exsList.appendChild(exsLI)
+        
+        document.getElementById("#exercises").appendChild(exsList)
+      }
     }
 
 
