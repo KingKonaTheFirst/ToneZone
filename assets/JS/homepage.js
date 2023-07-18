@@ -5,7 +5,7 @@ var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
-var muscle = 'biceps';
+var muscle = "";
 
 $(document).ready(function () {
   $("#chest").click(function () {
@@ -91,10 +91,38 @@ function exsDB() {
     }
   };
   
-  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', settings)
-    .then(response => response.json())
-    .then(data => console.log(data))
+  fetch('https://exercisedb.p.rapidapi.com/exercises/bodyPart/' + muscle , settings)
+  .then(function (response) {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error("Request failed. Status code: " + response.status);
+  })
+  .then(function (data) {
+    console.log(data);
+    let array = data;
+    for (let i = 0; i < 10; i++) {
+      let exercise = array[Math.floor(Math.random() * array.length)]
+      console.log(exercise);
+      // let exsName = data.name
+      // console.log(exsName);
+    }
+
+
+
+    // var videoTitle = data.items[0].snippet.title;
+    // var videoThumbnail = data.items[0].snippet.thumbnails.default.url;
+
+    // // Create a container element for the video
+    // var videoContainer = document.createElement("div");
+    // videoContainer.classList.add("video-item");
+    // videoContainer.appendChild(iframe);
+
+    // // Append the video container to the main container in your HTML
+    // document.getElementById("videoContainer").appendChild(videoContainer);
+  })
     .catch(error => console.error(error));
 }
 
 exsDB();
+
