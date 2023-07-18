@@ -1,23 +1,21 @@
 var chest = $("#chest");
-var chest = $("#back");
+var back = $("#back");
 var shoulders = $("#shoulders");
 var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
-var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-var apiUrl = "https://www.googleapis.com/youtube/v3/search";
 var input = "";
-var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
 
 $(document).ready(function () {
-  // Add click listener to the button
   $("#chest").click(function () {
-    // Code to execute when the button is clicked
-    alert("Button clicked")
+    input = "chest workout";
+    ytVid();
+    
   });
+  // Add click listener to the button
   $("#back").click(function () {
-    //   alert for testing delete later
-    alert("Button clicked!");
+    input = "back and bicep workout";
+    ytVid();
   });
   $("#shoulders").click(function () {
     //   alert for testing delete later
@@ -37,8 +35,11 @@ $(document).ready(function () {
   });
 });
 
-
-fetch(apiUrl + videoSearch + apiKey)
+function ytVid() {
+  var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
+  var apiUrl = "https://www.googleapis.com/youtube/v3/search";
+  var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
+  fetch(apiUrl + videoSearch + apiKey)
   .then(function (response) {
     if (response.ok) {
       return response.json();
@@ -72,3 +73,4 @@ fetch(apiUrl + videoSearch + apiKey)
   .catch(function (error) {
     console.log("Error:", error.message);
   });
+}
