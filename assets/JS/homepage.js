@@ -43,7 +43,7 @@ $(document).ready(function () {
     input = "cardio workout";
     ytVid();
   });
-  
+
   $("#dialog-form").dialog(function () {
     ("open")});
 });
@@ -120,6 +120,8 @@ function exsDB() {
       console.log(exercise);
       let exsName = exercise.name
       console.log(exsName);
+      let exsGif = exercise.gifUrl
+      console.log(exsGif);
     }
 
 
