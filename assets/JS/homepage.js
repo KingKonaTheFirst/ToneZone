@@ -4,14 +4,18 @@ var shoulders = $("#shoulders");
 var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
+var input = "";
 
 $(document).ready(function () {
-  // Add click listener to the button
   $("#chest").click(function () {
-
+    input = "chest workout";
+    ytVid();
+    
   });
+  // Add click listener to the button
   $("#back").click(function () {
-
+    input = "back and bicep workout";
+    ytVid();
   });
   $("#shoulders").click(function () {
 
@@ -29,12 +33,11 @@ $(document).ready(function () {
     ("open")});
 });
 
-var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
-var apiUrl = "https://www.googleapis.com/youtube/v3/search";
-var input = "";
-var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
-
-fetch(apiUrl + videoSearch + apiKey)
+function ytVid() {
+  var apiKey = "AIzaSyBAxCtGMC0LTqmTteYtwiNgPO_uQxXRexE";
+  var apiUrl = "https://www.googleapis.com/youtube/v3/search";
+  var videoSearch = "?part=snippet&q=" + input + "&type=video&maxResults=10&key=";
+  fetch(apiUrl + videoSearch + apiKey)
   .then(function (response) {
     if (response.ok) {
       return response.json();
@@ -67,7 +70,7 @@ fetch(apiUrl + videoSearch + apiKey)
   })
   .catch(function (error) {
     console.log("Error:", error.message);
-  });
+  })};
 
 $( function() {
   var dialog, form,
