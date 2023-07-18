@@ -39,6 +39,10 @@ font-family: 'Special Elite', cursive; */
     
 }
 
+.bg-title {
+    background-image: url(../Images/hero.jpg);
+}
+
 /* KONAS MODAL
 .modal {
     display: none;
