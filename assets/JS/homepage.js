@@ -12,33 +12,38 @@ $(document).ready(function () {
   $("#chest").click(function () {
     input = "chest workout";
     ytVid();
-    
   });
-  // Add click listener to the button
+
   $("#back").click(function () {
     input = "back workout";
     ytVid();
   });
+
   $("#shoulders").click(function () {
     input = "shoulder workout";
     ytVid();
   });
+
   $("#arms").click(function () {
     input = "arm workout";
     ytVid();
   });
+
   $("#legs").click(function () {
     input = "leg workout";
     ytVid();
   });
+
   $("#abs").click(function () {
     input = "ab workout";
     ytVid();
   });
+
   $("#cardio").click(function () {
     input = "cardio workout";
     ytVid();
   });
+  
   $("#dialog-form").dialog(function () {
     ("open")});
 });
