@@ -7,6 +7,7 @@ var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
 var muscle = "";
+let results = document.getElementById("exercises");
 
   $("#chest").click(function () {
     input = "chest workout";
@@ -25,6 +26,7 @@ var muscle = "";
   });
 
   $("#shoulders").click(function () {
+    // document.getElementById("exercises") = "";
     input = "shoulder workout";
     ytVid();
 
@@ -33,6 +35,7 @@ var muscle = "";
   });
 
   $("#arms").click(function () {
+    // document.getElementById("exercises") = "";
     input = "arm workout";
     ytVid();
 
@@ -41,6 +44,7 @@ var muscle = "";
   });
 
   $("#legs").click(function () {
+    // document.getElementById("exercises") = "";
     input = "leg workout";
     ytVid();
 
@@ -49,6 +53,7 @@ var muscle = "";
   });
 
   $("#abs").click(function () {
+    // document.getElementById("exercises") = "";
     input = "ab workout";
     ytVid();
 
@@ -57,12 +62,14 @@ var muscle = "";
   });
 
   $("#cardio").click(function () {
+    // document.getElementById("exercises") = "";
     input = "cardio workout";
     ytVid();
 
     muscle = "cardio";
     exsDB();
   });
+
 
 var apiKey = ['AIzaSyDv23s1gZQn8tyQFh7JaJyMzvBlke0SSg4'];
 let currentIndex = 0;
@@ -116,7 +123,7 @@ function exsDB() {
   const settings = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '73e984e367msh9cc0deea9bcc832p1ef798jsn680812134482',
+      'X-RapidAPI-Key': '39ecd03118msh3a4678c149cd5e3p186a4bjsn8ef20fe266ed',
       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     }
   };
@@ -133,6 +140,7 @@ function exsDB() {
     console.log(data);
     let array = data;
     var exsArray = [];
+    results.innerHTML = "";
     for (let i = 0; i < 10; i++) {
       var exercise = array[Math.floor(Math.random() * array.length)]
       var exsName = exercise.name
@@ -147,3 +155,12 @@ function exsDB() {
   })
     .catch(error => console.error(error));
 }
+
+$(document).ready(function () {
+  var histDisplay = localStorage.getItem("history");
+  console.log(histDisplay);
+  var history = document.getElementById("history")
+  let histData = document.createElement("div");
+  histData.innerHTML = histDisplay;
+  history.appendChild(histData);
+});
