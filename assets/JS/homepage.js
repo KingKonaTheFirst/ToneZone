@@ -12,16 +12,22 @@ $(document).ready(function () {
   $("#chest").click(function () {
     input = "chest workout";
     ytVid();
+
+    muscle = "chest";
   });
 
   $("#back").click(function () {
     input = "back workout";
     ytVid();
+
+    muscle = "back";
   });
 
   $("#shoulders").click(function () {
     input = "shoulder workout";
     ytVid();
+
+    muscle = "shoulders"
   });
 
   $("#arms").click(function () {
@@ -116,21 +122,26 @@ function exsDB() {
   .then(function (data) {
     console.log(data);
     let array = data;
+    var exsArray = [];
     for (let i = 0; i < 10; i++) {
       var exercise = array[Math.floor(Math.random() * array.length)]
       console.log(exercise);
-      let exsName = exercise.name
+      var exsName = exercise.name
       console.log(exsName);
-      let exsGif = exercise.gifUrl
+      var exsDisplay = exsArray.push(exsName)
+      console.log(exsDisplay);
+      var exsGif = exercise.gifUrl
       console.log(exsGif);
+      console.log(exsArray[10]);
 
-      let exsList = document.createElement("ul")
-      for (let list = 0; list < exercise.length; list++) {
-        let exsLI = document.createElement("li")
-        exsList.appendChild(exsLI)
-        
-        document.getElementById("#exercises").appendChild(exsList)
+      var exsList = document.getElementById("exercises")
+      for (let i = 9; i < exsArray.length; i++) {
+        let exsLI = document.createElement("li");
+        exsLI.innerHTML = exsArray[i];
+        exsList.appendChild(exsLI);
+
       }
+
     }
 
 
