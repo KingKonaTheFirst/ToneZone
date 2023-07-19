@@ -64,7 +64,7 @@ var muscle = "";
     exsDB();
   });
 
-var apiKey = ['AIzaSyBYNhIlc9YdmoYHiCntxp--3Ij1vzAkMnQ', 'AIzaSyDn2CMSUh7Rhv-2Ds0l28llAB6hMCQSNL8', 'AIzaSyAhAVWVVoc1OCmuRgIKRAiXuL9uLRgSWg0', 'AIzaSyD-Lbr2HwwyUVkz1BrUtN-b_OMTVZ0KKFI'];
+var apiKey = ['AIzaSyDv23s1gZQn8tyQFh7JaJyMzvBlke0SSg4'];
 let currentIndex = 0;
 
 function ytVid() {
@@ -106,8 +106,8 @@ function ytVid() {
   })
   .catch(function (error) {
     console.log("Error:", error.message);
-    currentIndex = (currentIndex + 1) % apiKey.length;
-    ytVid();
+    // currentIndex = (currentIndex + 1) % apiKey.length;
+    // ytVid();
     
   })};
 
