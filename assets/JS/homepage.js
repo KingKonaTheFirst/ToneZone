@@ -135,29 +135,15 @@ function exsDB() {
     var exsArray = [];
     for (let i = 0; i < 10; i++) {
       var exercise = array[Math.floor(Math.random() * array.length)]
-      console.log(exercise);
       var exsName = exercise.name
       console.log(exsName);
-      var exsDisplay = exsArray.push(exsName)
-      console.log(exsDisplay);
-      var exsGif = exercise.gifUrl
-      console.log(exsGif);
-      console.log(exsArray[10]);
-
+      exsArray.push(exsName)
       var exsList = document.getElementById("exercises")
-      for (let i = 9; i < exsArray.length; i++) {
-        let exsLI = document.createElement("li");
-        exsLI.innerHTML = exsArray[i];
-        exsList.appendChild(exsLI);
-
-      }
-
+      let exsLI = document.createElement("li");
+      exsLI.innerHTML = exsArray[i];
+      exsList.appendChild(exsLI);
     }
-
-
+    localStorage.setItem("history", exsArray);
   })
     .catch(error => console.error(error));
 }
-
-exsDB();
-
