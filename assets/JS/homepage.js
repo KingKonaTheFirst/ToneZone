@@ -6,14 +6,14 @@ var legs = $("#legs");
 var abs = $("#abs");
 var cardio = $("#cardio");
 var input = "";
-var muscle = "back";
+var muscle = "";
 
-$(document).ready(function () {
   $("#chest").click(function () {
     input = "chest workout";
     ytVid();
 
     muscle = "chest";
+    exsDB();
   });
 
   $("#back").click(function () {
@@ -21,6 +21,7 @@ $(document).ready(function () {
     ytVid();
 
     muscle = "back";
+    exsDB();
   });
 
   $("#shoulders").click(function () {
@@ -28,33 +29,42 @@ $(document).ready(function () {
     ytVid();
 
     muscle = "shoulders"
+    exsDB();
   });
 
   $("#arms").click(function () {
     input = "arm workout";
     ytVid();
+
+    muscle = "upper arms";
+    exsDB();
   });
 
   $("#legs").click(function () {
     input = "leg workout";
     ytVid();
+
+    muscle = "upper legs";
+    exsDB();
   });
 
   $("#abs").click(function () {
     input = "ab workout";
     ytVid();
+
+    muscle = "waist";
+    exsDB();
   });
 
   $("#cardio").click(function () {
     input = "cardio workout";
     ytVid();
+
+    muscle = "cardio";
+    exsDB();
   });
 
-  $("#dialog-form").dialog(function () {
-    ("open")});
-});
-
-var apiKey = ['AIzaSyBYNhIlc9YdmoYHiCntxp--3Ij1vzAkMnQ', 'AIzaSyDn2CMSUh7Rhv-2Ds0l28llAB6hMCQSNL8', 'AIzaSyAhAVWVVoc1OCmuRgIKRAiXuL9uLRgSWg0'];
+var apiKey = ['AIzaSyBYNhIlc9YdmoYHiCntxp--3Ij1vzAkMnQ', 'AIzaSyDn2CMSUh7Rhv-2Ds0l28llAB6hMCQSNL8', 'AIzaSyAhAVWVVoc1OCmuRgIKRAiXuL9uLRgSWg0', 'AIzaSyD-Lbr2HwwyUVkz1BrUtN-b_OMTVZ0KKFI'];
 let currentIndex = 0;
 
 function ytVid() {
