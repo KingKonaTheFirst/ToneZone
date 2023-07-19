@@ -5,19 +5,13 @@ Are you tired of doing the same weekly workout routine? Well welcome to the Tone
 
 ## Technologies Used
 
-Javascript
-
-HTML
-
-CSS
-
-Tailwind CSS
-
-JQuery
-
-Youtube Data V3 API
-
-ExerciseDB API
+* Javascript
+* HTML
+* CSS
+* Tailwind CSS
+* JQuery
+* Youtube Data V3 API
+* ExerciseDB API
 
 ## Usage
 https://kingkonathefirst.github.io/ToneZone/
@@ -29,6 +23,6 @@ MIT License
 
 
 ## Contributors
-Landon Deroin
-Travis Rivera
-Russell Heady II
+* Landon Deroin
+* Travis Rivera
+* Russell Heady II
