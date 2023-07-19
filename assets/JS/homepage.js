@@ -8,6 +8,7 @@ var cardio = $("#cardio");
 var input = "";
 var muscle = "";
 let results = document.getElementById("exercises");
+let vidRe = document.getElementById("videoContainer");
 
   $("#chest").click(function () {
     input = "chest workout";
@@ -104,6 +105,7 @@ function ytVid() {
     thumbnail.alt = videoTitle;
 
     // Create a container element for the video
+    vidRe.innerHTML = "";
     var videoContainer = document.createElement("div");
     videoContainer.classList.add("video-item");
     videoContainer.appendChild(iframe);
