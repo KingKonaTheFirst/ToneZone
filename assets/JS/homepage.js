@@ -71,7 +71,7 @@ let results = document.getElementById("exercises");
   });
 
 
-var apiKey = ['AIzaSyDv23s1gZQn8tyQFh7JaJyMzvBlke0SSg4'];
+var apiKey = ['AIzaSyB44dqKdrym94Z3f7mf0ji0ksUgGomLyso', 'AIzaSyDv23s1gZQn8tyQFh7JaJyMzvBlke0SSg4'];
 let currentIndex = 0;
 
 function ytVid() {
@@ -113,7 +113,7 @@ function ytVid() {
   })
   .catch(function (error) {
     console.log("Error:", error.message);
-    // currentIndex = (currentIndex + 1) % apiKey.length;
+    currentIndex = (currentIndex + 1) % apiKey.length;
     // ytVid();
     
   })};
