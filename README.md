@@ -1,16 +1,28 @@
 # ToneZone
 
 ## Description
-Welcome to the ToneZone! Get in the Zone while you get Toned. Given selected parameters we will give you a workout based on your needs. The user will select the checkbox if they have gym equipment and Using our two API's (ExerciseDB & Youtube Data V3) we wil
+Are you tired of doing the same weekly workout routine? Well welcome to the ToneZone! A website we built in order to help people build workouts for the muscles they want to target. When the user picks an area of the body using the buttons on the side of our page, we will generate specific exercises to target that body part. We will also generate videos showing the user popular workouts from youtube so they can see proper form and get additional workout ideas.
 
-## Installation
-N/A
+## Technologies Used
+
+* Javascript
+* HTML
+* CSS
+* Tailwind CSS
+* JQuery
+* Youtube Data V3 API
+* ExerciseDB API
 
 ## Usage
 https://kingkonathefirst.github.io/ToneZone/
 
 ## License
-N/A
+MIT License
 
 ## Screenshots
 
+
+## Contributors
+* Landon Deroin
+* Travis Rivera
+* Russell Heady II
