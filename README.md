@@ -20,7 +20,9 @@ https://kingkonathefirst.github.io/ToneZone/
 MIT License
 
 ## Screenshots
-
+![screenshot of homepage](./assets/Images/screenshot-home.png)
+![screenshot vision](./assets/Images/screenshot-vision.png)
+![screenshot contact](./assets/Images/screenshot-contact.png)
 
 ## Contributors
 * Landon Deroin
